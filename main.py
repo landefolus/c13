@@ -7,3 +7,8 @@ def search(t=""):
                 return pos
     return -1
 
+def delete(t=""):
+    pos = search(t)
+    if pos>0:
+        phonebook.pop(pos)
+
