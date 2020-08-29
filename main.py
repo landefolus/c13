@@ -1,14 +1,20 @@
-phonebook = []
+from coffecars import Car, Drink
+from coffecars.cars import Cars_list
+from coffecars.drink import DrinksList
 
-def search(t=""):
-    for pos, one_record in enumerate(phonebook):
-        for val in one_record.values():
-            if val.find(t)>=0:
-                return pos
-    return -1
+if __name__ == '__main__':
 
-def delete(t=""):
-    pos = search(t)
-    if pos>0:
-        phonebook.pop(pos)
+    all_drinks = DrinksList()
+    all_cars = Cars_list.restorag('data/dat.json', all_drinks)
+    while True:
+        '''
+        выход
+        добавить машину
+        добавить напиток
+        присвоить напиток машинам
+        '''
+        action = input("?")
+        if action=='q':
+            break
+
 
